@@ -1,0 +1,109 @@
+header {
+    position: relative;
+    height: 30vh;
+    width: 100%;
+    background: url('../images/pattern-bg.png');
+    background-size: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    .titleContent {
+        width: 100%;
+        margin: 25px auto;
+
+        h2 {
+            color: white;
+            margin: 0;
+        }
+    }
+
+    .boxInput {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        input {
+            width: 40%;
+            color: black;
+            padding: 15px;
+            border: none;
+            border-radius: 10px 0 0 10px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            width: 50px;
+            background: #3f3f3f;
+            border: none;
+            border-radius: 0 10px 10px 0;
+            cursor: pointer;
+        }
+
+        button img {
+            vertical-align: middle;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    }
+
+    .Resonse {
+        text-align: center;
+        position: absolute;
+        top: 75%;
+        left: 5%;
+        width: 90%;
+        height: auto;
+        background: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+
+        div {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        div p {
+            margin: 0;
+            color: #757575;
+            font-weight: bold;
+        }
+
+        div h2 {
+            margin: 0;
+        }
+
+        .divider div{
+            border-right: 1px solid #757575;
+            height: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width:1185px) {
+    .Resonse {
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Resonse div {
+        text-align: center !important;
+    }
+    .divider {
+        display: none !important;
+    }
+}

@@ -7,8 +7,10 @@ const getQueryIP = () => {
         if (ip.match(ipformat) || ip.match(urlformat)) {
             return ip
         }
+        else {
+            alert('Input not is a IP address or URL! 😵')
+        }
     }
-    alert('Input not is a IP address or URL! 😵')
     return 0
 }
 export default getQueryIP

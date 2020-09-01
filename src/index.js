@@ -7,6 +7,7 @@ import getInfoIP from './lib/getInfoIP';
 import ShowMap from './lib/ShowMap';
 import getQueryIP from './lib/getQueryIP';
 
+import frontendmentor from './images/favicon-32x32.png'
 import js from './images/javascript.svg'
 import webpack from './images/webpack.svg'
 import sass from './images/sass-1.svg'
@@ -31,6 +32,15 @@ const RenderApp = async () => {
 
     let mylogo = document.getElementById('logo');
 
+    function setFavicons(favImg){
+        let headTitle = document.querySelector('head')
+        let setFavicon = document.createElement('link')
+        setFavicon.setAttribute('rel','shortcut icon')
+        setFavicon.setAttribute('href',favImg)
+        headTitle.appendChild(setFavicon)
+    }
+
+    setFavicons(frontendmentor)
 
     setInterval(() => {
         if (cont < arrayLogos.length - 1) {

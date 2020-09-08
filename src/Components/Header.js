@@ -7,7 +7,7 @@ const Header = ({ value = '?????', ip = '?????', city = '?????', region = '?????
                 <h2>IP Address Tracker</h2>
             </div>
             <form class="boxInput">
-                <input type="text" name="ip" value="${value === 0 ? '': ip}" placeholder="Search for any IP address or domain"/>
+                <input type="text" name="ip" value="${value === 0 ? '': value}" placeholder="Search for any IP address or domain"/>
                 <button>
                     <img src='${Arrow}'/>
                 </button>

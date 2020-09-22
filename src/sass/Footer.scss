@@ -1,9 +1,25 @@
+@media  (min-width:768px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        height: 3vh;
+    }
+}
+
+@media (max-width:767px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+}
+
 footer {
     background: black;
-    display: flex;
-    flex-direction: row;
-    height: 3vh;
     justify-content: space-around;
+    align-items: center;
     color: white;
     font-weight: bold;
 
@@ -18,17 +34,68 @@ footer {
         color: white;
     }
 
-    #logo {
-        cursor: pointer;
-        opacity: 1;
-        -webkit-transition: opacity 0.3s ease-in-out;
-        -moz-transition: opacity 0.3s ease-in-out;
-        -ms-transition: opacity 0.3s ease-in-out;
-        -o-transition: opacity 0.3s ease-in-out;
-        transition: opacity 0.3 ease-in-out;
+    .power {
+        display: flex;
+        justify-content: space-around;
     }
 
-    #logo.fade {
-        opacity: 0;
+    #Logos {
+        position: relative;
     }
+
+    #Logos img {
+        height: 100%;
+        background: black;
+        position: absolute;
+        left: 0;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+
+        animation-name: cf4FadeInOut;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 24s;
+        animation-direction: alternate;
+    }
+
+    @keyframes cf4FadeInOut {
+        0% {
+            opacity: 1;
+        }
+
+        12.5% {
+            opacity: 1;
+        }
+
+        25% {
+            opacity: 0;
+        }
+
+        87.5% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    #Logos img:nth-of-type(1) {
+        animation-delay: 9s;
+    }
+
+    #Logos img:nth-of-type(2) {
+        animation-delay: 6s;
+    }
+
+    #Logos img:nth-of-type(3) {
+        animation-delay: 3s;
+    }
+
+    #Logos img:nth-of-type(4) {
+        animation-delay: 0s;
+    }
+
 }

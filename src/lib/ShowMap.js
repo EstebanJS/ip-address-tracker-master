@@ -6,7 +6,10 @@ const ShowMap = (lat, lon) => {
     });
 
     const myIcon = L.icon({
-        iconUrl: locationIcon
+        iconUrl: locationIcon,
+        iconSize: [38, 38],
+        iconAnchor: [22, 37],
+        popupAnchor: [-3, -37],
     });
 
     const marker = L.marker([lat, lon], { icon: myIcon }).addTo(mymap);

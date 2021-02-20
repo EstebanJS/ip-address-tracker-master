@@ -6,6 +6,7 @@ const getInfoIP = async ({ip=0}={}) => {
     }else{
         IP_SEARCH = ip
     }
+    
     const rest = await fetch(`https://cors-anywhere.herokuapp.com/http://ip-api.com/json/${IP_SEARCH}`);
     const result = await rest.json()
     return result
